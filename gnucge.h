@@ -11,9 +11,12 @@
 #ifdef GNUCEQ
 #else
 #define GNUCEQ(x, y, z) \
-  ((__GNUC__) == (x) && \
-   (__GNUC_MINOR__) == (y) && \
-   (__GNUC_PATCHLEVEL__) == (z))
+  (((x) % 1 != 0) + \
+   ((y) % 1 != 0) + \
+   ((z) % 1 != 0) + \
+   ((__GNUC__) == (x) && \
+    (__GNUC_MINOR__) == (y) && \
+    (__GNUC_PATCHLEVEL__) == (z)))
 #endif
 
 #ifndef GNUCLT
