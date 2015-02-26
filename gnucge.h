@@ -8,16 +8,16 @@
   ((__GNUC_PATCHLEVEL__) >= (z))))))
 #endif
 
-#ifndef GNUCLT
-#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
-#endif
-
 #ifdef GNUCEQ
 #else
 #define GNUCEQ(x, y, z)    \
   ((__GNUC__)            == (x) && \
   ((__GNUC_MINOR__)      == (y) && \
   ((__GNUC_PATCHLEVEL__) == (z))))
+#endif
+
+#ifndef GNUCLT
+#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
 #endif
 
 #ifndef GNUCNE
