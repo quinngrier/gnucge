@@ -1,4 +1,5 @@
-#ifndef GNUCGE
+#ifdef GNUCGE
+#else
 #define GNUCGE(x, y, z)    \
   ((__GNUC__)            >  (x) || \
   ((__GNUC__)            == (x) && \
@@ -11,7 +12,8 @@
 #define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
 #endif
 
-#ifndef GNUCEQ
+#ifdef GNUCEQ
+#else
 #define GNUCEQ(x, y, z)    \
   ((__GNUC__)            == (x) && \
   ((__GNUC_MINOR__)      == (y) && \
