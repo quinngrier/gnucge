@@ -1,11 +1,22 @@
 #ifdef GNUCGE
 #else
-#define GNUCGE(x, y, z)    \
-  ((__GNUC__)            >  (x) || \
-  ((__GNUC__)            == (x) && \
-  ((__GNUC_MINOR__)      >  (y) || \
-  ((__GNUC_MINOR__)      == (y) && \
-  ((__GNUC_PATCHLEVEL__) >= (z))))))
+#define GNUCGE(x, y, z) \
+  (((x) % 1 == 0) && \
+   (((x) <= 0 && (x) != 0) || \
+    ((__GNUC__) + ((x) - (x)) > \
+     (x) + ((__GNUC__) - (__GNUC__))) || \
+    (((__GNUC__) + ((x) - (x)) == \
+      (x) + ((__GNUC__) - (__GNUC__))) && \
+     ((y) % 1 == 0) && \
+     (((y) <= 0 && (y) != 0) || \
+      ((__GNUC_MINOR__) + ((y) - (y)) > \
+       (y) + ((__GNUC_MINOR__) - (__GNUC_MINOR__))) || \
+      (((__GNUC_MINOR__) + ((y) - (y)) == \
+        (y) + ((__GNUC_MINOR__) - (__GNUC_MINOR__))) && \
+       ((z) % 1 == 0) && \
+       (((z) <= 0 && (z) != 0) || \
+        ((__GNUC_PATCHLEVEL__) + ((z) - (z)) >= \
+         (z) + ((__GNUC_PATCHLEVEL__) - (__GNUC_PATCHLEVEL__)))))))))
 #endif
 
 #ifdef GNUCEQ
