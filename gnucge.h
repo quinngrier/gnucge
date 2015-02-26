@@ -8,8 +8,7 @@
 #endif
 
 #ifndef GNUCLT
-#define GNUCLT(x, y, z) \
-  (!GNUCGE(x, y, z))
+#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
 #endif
 
 #ifndef GNUCEQ
@@ -20,19 +19,15 @@
 #endif
 
 #ifndef GNUCNE
-#define GNUCNE(x, y, z) \
-  (!GNUCEQ(x, y, z))
+#define GNUCNE(x, y, z) (!GNUCEQ(x, y, z))
 #endif
 
 #ifndef GNUCLE
-#define GNUCLE(x, y, z) \
-  (GNUCLT(x, y, z) ||   \
-  (GNUCEQ(x, y, z)))
+#define GNUCLE(x, y, z) (GNUCLT(x, y, z) || (GNUCEQ(x, y, z)))
 #endif
 
 #ifndef GNUCGT
-#define GNUCGT(x, y, z) \
-  (!GNUCLE(x, y, z))
+#define GNUCGT(x, y, z) (!GNUCLE(x, y, z))
 #endif
 
 /*
