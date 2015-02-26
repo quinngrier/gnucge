@@ -14,12 +14,12 @@
   ((x) % 1 == 0 && \
    (y) % 1 == 0 && \
    (z) % 1 == 0 && \
-   (((__GNUC__) + ((x) - (x)) == \
-     (x) + ((__GNUC__) - (__GNUC__))) && \
-    ((__GNUC_MINOR__) + ((y) - (y)) == \
-     (y) + ((__GNUC_MINOR__) - (__GNUC_MINOR__))) && \
-    ((__GNUC_PATCHLEVEL__) + ((z) - (z)) == \
-     (z) + ((__GNUC_PATCHLEVEL__) - (__GNUC_PATCHLEVEL__)))))
+   ((__GNUC__) + ((x) - (x)) == \
+    (x) + ((__GNUC__) - (__GNUC__))) && \
+   ((__GNUC_MINOR__) + ((y) - (y)) == \
+    (y) + ((__GNUC_MINOR__) - (__GNUC_MINOR__))) && \
+   ((__GNUC_PATCHLEVEL__) + ((z) - (z)) == \
+    (z) + ((__GNUC_PATCHLEVEL__) - (__GNUC_PATCHLEVEL__))))
 #endif
 
 #ifndef GNUCLT
