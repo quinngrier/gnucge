@@ -10,9 +10,9 @@
 
 #ifdef GNUCEQ
 #else
-#define GNUCEQ(x, y, z)    \
-  ((__GNUC__)            == (x) && \
-   (__GNUC_MINOR__)      == (y) && \
+#define GNUCEQ(x, y, z) \
+  ((__GNUC__) == (x) && \
+   (__GNUC_MINOR__) == (y) && \
    (__GNUC_PATCHLEVEL__) == (z))
 #endif
 
