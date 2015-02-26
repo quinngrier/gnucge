@@ -14,10 +14,13 @@
   ((x) % 1 == 0 && \
    (y) % 1 == 0 && \
    (z) % 1 == 0 && \
+   ((x) > 0 || (x) == 0) && \
    ((__GNUC__) + ((x) - (x)) == \
     (x) + ((__GNUC__) - (__GNUC__))) && \
+   ((y) > 0 || (y) == 0) && \
    ((__GNUC_MINOR__) + ((y) - (y)) == \
     (y) + ((__GNUC_MINOR__) - (__GNUC_MINOR__))) && \
+   ((z) > 0 || (z) == 0) && \
    ((__GNUC_PATCHLEVEL__) + ((z) - (z)) == \
     (z) + ((__GNUC_PATCHLEVEL__) - (__GNUC_PATCHLEVEL__))))
 #endif
