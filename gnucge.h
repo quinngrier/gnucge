@@ -1,38 +1,38 @@
 #ifndef GNUCGE
-#define GNUCGE(major, minor, patch)    \
-  ((__GNUC__)            >  (major) || \
-  ((__GNUC__)            == (major) && \
-  ((__GNUC_MINOR__)      >  (minor) || \
-  ((__GNUC_MINOR__)      == (minor) && \
-  ((__GNUC_PATCHLEVEL__) >= (patch))))))
+#define GNUCGE(x, y, z)    \
+  ((__GNUC__)            >  (x) || \
+  ((__GNUC__)            == (x) && \
+  ((__GNUC_MINOR__)      >  (y) || \
+  ((__GNUC_MINOR__)      == (y) && \
+  ((__GNUC_PATCHLEVEL__) >= (z))))))
 #endif
 
 #ifndef GNUCLT
-#define GNUCLT(major, minor, patch) \
-  (!GNUCGE(major, minor, patch))
+#define GNUCLT(x, y, z) \
+  (!GNUCGE(x, y, z))
 #endif
 
 #ifndef GNUCEQ
-#define GNUCEQ(major, minor, patch)    \
-  ((__GNUC__)            == (major) && \
-  ((__GNUC_MINOR__)      == (minor) && \
-  ((__GNUC_PATCHLEVEL__) == (patch))))
+#define GNUCEQ(x, y, z)    \
+  ((__GNUC__)            == (x) && \
+  ((__GNUC_MINOR__)      == (y) && \
+  ((__GNUC_PATCHLEVEL__) == (z))))
 #endif
 
 #ifndef GNUCNE
-#define GNUCNE(major, minor, patch) \
-  (!GNUCEQ(major, minor, patch))
+#define GNUCNE(x, y, z) \
+  (!GNUCEQ(x, y, z))
 #endif
 
 #ifndef GNUCLE
-#define GNUCLE(major, minor, patch) \
-  (GNUCLT(major, minor, patch) ||   \
-  (GNUCEQ(major, minor, patch)))
+#define GNUCLE(x, y, z) \
+  (GNUCLT(x, y, z) ||   \
+  (GNUCEQ(x, y, z)))
 #endif
 
 #ifndef GNUCGT
-#define GNUCGT(major, minor, patch) \
-  (!GNUCLE(major, minor, patch))
+#define GNUCGT(x, y, z) \
+  (!GNUCLE(x, y, z))
 #endif
 
 /*
