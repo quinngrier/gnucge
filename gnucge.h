@@ -34,7 +34,7 @@
 #endif
 
 #ifndef GNUCLE
-#define GNUCLE(x, y, z) (GNUCLT(x, y, z) || (GNUCEQ(x, y, z)))
+#define GNUCLE(x, y, z) (GNUCLT(x, y, z) || GNUCEQ(x, y, z))
 #endif
 
 #ifndef GNUCGT
