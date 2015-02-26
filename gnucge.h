@@ -1,3 +1,7 @@
+/*
+ * This header file defines six macros for testing the GNU C version.
+ */
+
 #ifdef GNUCGE
 #elif !defined(__GNUC__)
 #define GNUCGE(x, y, z) \
