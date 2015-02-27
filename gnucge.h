@@ -1,5 +1,18 @@
 /*
  * This header file defines six macros for testing the GNU C version.
+ *
+ * GNU C is the C language along with the extensions of the GNU Compiler
+ * Collection (GCC). Many of these extensions can be used to good effect
+ * in otherwise portable code. As a simple example, you can specify that
+ * a function cannot return:
+ *
+ *   __attribute__((__noreturn__))
+ *   static void panic(void) {
+ *     abort();
+ *   }
+ *
+ * See the GCC manual for more information on GNU C. In particular, see
+ * the "Extensions to the C Language Family" section.
  */
 
 #ifdef GNUCGE
