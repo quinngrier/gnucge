@@ -116,20 +116,20 @@
          (z) + ((0) - (0)))))))))
 #endif
 
-#ifndef GNUCLT
-#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
-#endif
-
-#ifndef GNUCNE
-#define GNUCNE(x, y, z) (!GNUCEQ(x, y, z))
-#endif
-
 #ifndef GNUCLE
 #define GNUCLE(x, y, z) (!GNUCGT(x, y, z))
 #endif
 
+#ifndef GNUCLT
+#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
+#endif
+
 #ifndef GNUCEQ
 #define GNUCEQ(x, y, z) (GNUCGE(x, y, z) && GNUCLE(x, y, z))
+#endif
+
+#ifndef GNUCNE
+#define GNUCNE(x, y, z) (!GNUCEQ(x, y, z))
 #endif
 
 /*
