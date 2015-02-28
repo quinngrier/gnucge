@@ -3,7 +3,7 @@
  *
  * GNU C is the normal C language along with the extensions provided by
  * the GNU Compiler Collection (GCC). These extensions can be useful in
- * otherwise portable code. As a simple example, you can specify that a
+ * otherwise portable code. As a simple example, we can specify that a
  * function cannot return:
  *
  *   __attribute__((__noreturn__))
