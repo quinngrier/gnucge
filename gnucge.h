@@ -4,11 +4,12 @@
  * GNU C is the normal C language along with the extensions provided by
  * the GNU Compiler Collection (GCC). These extensions can be useful in
  * otherwise portable code. For example, we can specify that a function
- * cannot return:
+ * cannot return a null pointer:
  *
- *   __attribute__((__noreturn__))
- *   static void panic(void) {
- *     abort();
+ *   __attribute__((__returns_nonnull__))
+ *   static int *foo(void) {
+ *     static int bar;
+ *     return &bar;
  *   }
  *
  * This is only a simple example. GCC has a wide variety of extensions.
@@ -32,10 +33,11 @@
  * __GNUC__. Continuing the same example:
  *
  *   #ifdef __GNUC__
- *   __attribute__((__noreturn__))
+ *   __attribute__((__returns_nonnull__))
  *   #endif
- *   static void panic(void) {
- *     abort();
+ *   static int *foo(void) {
+ *     static int bar;
+ *     return &bar;
  *   }
  *
  * However, this does not fully utilize the information provided by the
