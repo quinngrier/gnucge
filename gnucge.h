@@ -40,8 +40,13 @@
  *     return &bar;
  *   }
  *
- * However, this does not fully utilize the information provided by the
- * macros.
+ * However, this does not properly use the information provided by the
+ * macros. The existence of __GNUC__ only implies that the compiler
+ * supports some version of GNU C. If we look through old GCC manuals,
+ * we discover that returns_nonnull is introduced in version 4.9.2. If
+ * the compiler only advertises support for an older version of GNU C,
+ * the example still might not work. This is indeed the case with the
+ * aforementioned version of Clang.
  */
 
 #ifdef GNUCGE
