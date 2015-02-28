@@ -25,7 +25,7 @@
  * Compilers that support GNU C define these macros as the major, minor,
  * and patch numbers of the latest version of GCC whose extensions are
  * supported. These macros only imply that the compiler supports GNU C,
- * not that the compiler is GCC itself. For example, version 3.5.0 of
+ * not that the compiler is GCC itself. For example, version 3.4.0 of
  * the Clang compiler defines these macros as 4, 2, and 1 to indicate
  * that it supports the extensions of version 4.2.1 of GCC.
  *
