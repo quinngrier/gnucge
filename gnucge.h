@@ -14,10 +14,10 @@
  * See the GCC manual for more information on GNU C. In particular, see
  * the "Extensions to the C Language Family" section.
  *
- * The above example will of course not work with a compiler that does
- * not support GNU C. To maintain portability, we must somehow make the
- * special code optional. Fortunately, the preprocessor of any compiler
- * that supports GNU C will predefine a few macros that we can test.
+ * The above example will of course not work with compilers that do not
+ * support GNU C. To maintain portability, we must make the special code
+ * optional. One way we can do this is by testing a few macros that are
+ * commonly predefined by compilers that support GNU C.
  *
  * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
  * These are nonnegative integer constant expressions that are suitable
