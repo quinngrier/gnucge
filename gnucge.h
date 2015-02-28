@@ -13,6 +13,19 @@
  *
  * See the GCC manual for more information on GNU C. In particular, see
  * the "Extensions to the C Language Family" section.
+ *
+ * The above example will of course not work with a compiler that does
+ * not support GNU C. To maintain portability, we must somehow make the
+ * special code optional. Fortunately, the preprocessor of any compiler
+ * that supports GNU C will predefine a few macros that we can test.
+ *
+ * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
+ * These are nonnegative integer constant expressions that are suitable
+ * for preprocessor use and whose values are the major, minor, and patch
+ * numbers of the latest version of GCC whose extensions are supported.
+ * Note that the compiler is not necessarily GCC: version 3.5.0 of the
+ * Clang compiler defines these macros to 4, 2, and 1 to indicate that
+ * it supports the extensions of GCC 4.2.1.
  */
 
 #ifdef GNUCGE
