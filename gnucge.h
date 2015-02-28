@@ -3,16 +3,17 @@
  *
  * GNU C is the normal C language along with the extensions provided by
  * the GNU Compiler Collection (GCC). These extensions can be useful in
- * otherwise portable code. As a simple example, we can specify that a
- * function cannot return:
+ * otherwise portable code. For example, we can specify that a function
+ * cannot return:
  *
  *   __attribute__((__noreturn__))
  *   static void panic(void) {
  *     abort();
  *   }
  *
- * See the GCC manual for more information on GNU C. In particular, see
- * the "Extensions to the C Language Family" section.
+ * This is only a simple example. GCC has a wide variety of extensions.
+ * See the GCC manual for more information. In particular, see the
+ * "Extensions to the C Language Family" section.
  *
  * The above example will of course not work with compilers that do not
  * support GNU C. To maintain portability, we must make the special code
