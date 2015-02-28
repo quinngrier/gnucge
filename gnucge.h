@@ -21,12 +21,12 @@
  * only defined by compilers that support GNU C.
  *
  * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
- * These are nonnegative integer constant expressions that are suitable
- * for preprocessor use and whose values are the major, minor, and patch
- * numbers of the latest version of GCC whose extensions are supported.
- * Note that the compiler is not necessarily GCC: version 3.5.0 of the
- * Clang compiler defines these macros to 4, 2, and 1 to indicate that
- * it supports the extensions of GCC 4.2.1.
+ * Compilers that support GNU C define these macros as the major, minor,
+ * and patch numbers of the latest version of GCC whose extensions are
+ * supported. These macros only imply that the compiler supports GNU C,
+ * not that the compiler is GCC itself. For example, version 3.5.0 of
+ * the Clang compiler defines these macros as 4, 2, and 1 to indicate
+ * that it supports the extensions of version 4.2.1 of GCC.
  */
 
 #ifdef GNUCGE
