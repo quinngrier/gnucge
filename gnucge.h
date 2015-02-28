@@ -18,7 +18,7 @@
  * The above example will of course not work with compilers that do not
  * support GNU C. To maintain portability, we must make the special code
  * optional. One way we can do this is by testing a few macros that are
- * commonly predefined by compilers that support GNU C.
+ * only defined by compilers that support GNU C.
  *
  * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
  * These are nonnegative integer constant expressions that are suitable
