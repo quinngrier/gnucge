@@ -27,6 +27,19 @@
  * not that the compiler is GCC itself. For example, version 3.5.0 of
  * the Clang compiler defines these macros as 4, 2, and 1 to indicate
  * that it supports the extensions of version 4.2.1 of GCC.
+ *
+ * One way to test these macros is simply to test for the existence of
+ * __GNUC__. Continuing the same example:
+ *
+ *   #ifdef __GNUC__
+ *   __attribute__((__noreturn__))
+ *   #endif
+ *   static void panic(void) {
+ *     abort();
+ *   }
+ *
+ * However, this does not fully utilize the information provided by the
+ * macros.
  */
 
 #ifdef GNUCGE
