@@ -48,6 +48,8 @@
  * for version 4.9.2 but not for version 4.8.4. If the macros advertise
  * a version older than 4.9.2, our example could still fail to compile.
  * This is indeed what happens with version 3.4.0 of the Clang compiler.
+ *
+ * (more documentation to come)
  */
 
 #ifdef GNUCGE
