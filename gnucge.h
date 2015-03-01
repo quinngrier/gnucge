@@ -12,9 +12,9 @@
  *     return &bar;
  *   }
  *
- * This is only a simple example. GCC has a wide variety of extensions.
- * See the GCC manual for more information. In particular, see the
- * "Extensions to the C Language Family" section.
+ * This is only a simple example. GCC has a wide variety of extensions
+ * that we will not cover here. See the GCC manual for more information.
+ * In particular, see the "Extensions to the C Language Family" section.
  *
  * The above example will of course not work with compilers that do not
  * support GNU C. To maintain portability, we must make the special code
