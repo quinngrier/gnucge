@@ -31,7 +31,7 @@
  * 4.2.1 of GCC.
  *
  * A naive way to use these macros is just to test for the existence of
- * __GNUC__. Continuing our example:
+ * __GNUC__. Revising our example:
  *
  *   #ifdef __GNUC__
  *   __attribute__((__returns_nonnull__))
