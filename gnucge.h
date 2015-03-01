@@ -21,13 +21,14 @@
  * optional. One way we can do this is by testing a few macros that the
  * compiler will predefine if it supports GNU C.
  *
- * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
- * Compilers that support GNU C define these macros as the major, minor,
- * and patch numbers of the latest version of GCC whose extensions are
- * supported. These macros only imply that the compiler supports GNU C,
- * not that the compiler is GCC itself. For example, version 3.4.0 of
- * the Clang compiler defines these macros as 4, 2, and 1 to indicate
- * that it supports the extensions of version 4.2.1 of GCC.
+ * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__. If
+ * the compiler supports GNU C, it will predefine these macros to be the
+ * major, minor, and patch numbers of the latest version of GCC whose
+ * extensions it supports. The existence of these macros only means that
+ * the compiler supports GNU C, not that the compiler is GCC itself. For
+ * example, version 3.4.0 of the Clang compiler defines these macros to
+ * be 4, 2, and 1 to indicate that it supports the extensions of version
+ * 4.2.1 of GCC.
  *
  * One way to test these macros is simply to test for the existence of
  * __GNUC__. Continuing the same example:
