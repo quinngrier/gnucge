@@ -16,10 +16,10 @@
  * that we will not cover here. See the GCC manual for more information.
  * In particular, see the "Extensions to the C Language Family" section.
  *
- * The above example will of course not work with compilers that do not
+ * Our example will of course fail to compile if the compiler does not
  * support GNU C. To maintain portability, we must make the special code
- * optional. One way we can do this is by testing a few macros that are
- * only defined by compilers that support GNU C.
+ * optional. One way we can do this is by testing a few macros that the
+ * compiler will predefine if it supports GNU C.
  *
  * The macros are __GNUC__, __GNUC_MINOR__, and __GNUC_PATCHLEVEL__.
  * Compilers that support GNU C define these macros as the major, minor,
