@@ -30,8 +30,8 @@
  * be 4, 2, and 1 to indicate that it supports the extensions of version
  * 4.2.1 of GCC.
  *
- * One way to test these macros is simply to test for the existence of
- * __GNUC__. Continuing the same example:
+ * A naive way to use these macros is just to test for the existence of
+ * __GNUC__. Continuing our example:
  *
  *   #ifdef __GNUC__
  *   __attribute__((__returns_nonnull__))
