@@ -1,0 +1,3 @@
+[submodule "tgicmp"]
+	path = tgicmp
+	url = https://github.com/quinngrier/tgicmp.git
