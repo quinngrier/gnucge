@@ -56,66 +56,66 @@
 
 #ifdef GNUCGE
 #elif defined(__GNUC_PATCHLEVEL__)
-#define GNUCGE(x, y, z) \
-  (TGIGT(__GNUC__, x) || \
-   (TGIEQ(__GNUC__, x) && \
-    (TGIGT(__GNUC_MINOR__, y) || \
-     (TGIEQ(__GNUC_MINOR__, y) && \
-      (TGIGE(__GNUC_PATCHLEVEL__, z))))))
+  #define GNUCGE(x, y, z) \
+    (TGIGT(__GNUC__, x) || \
+     (TGIEQ(__GNUC__, x) && \
+      (TGIGT(__GNUC_MINOR__, y) || \
+       (TGIEQ(__GNUC_MINOR__, y) && \
+        (TGIGE(__GNUC_PATCHLEVEL__, z))))))
 #elif defined(__GNUC_MINOR__)
-#define GNUCGE(x, y, z) \
-  (TGIGT(__GNUC__, x) || \
-   (TGIEQ(__GNUC__, x) && \
-    (TGIGT(__GNUC_MINOR__, y) || \
-     (TGIEQ(__GNUC_MINOR__, y) && \
-      (TGIGE(0, z))))))
+  #define GNUCGE(x, y, z) \
+    (TGIGT(__GNUC__, x) || \
+     (TGIEQ(__GNUC__, x) && \
+      (TGIGT(__GNUC_MINOR__, y) || \
+       (TGIEQ(__GNUC_MINOR__, y) && \
+        (TGIGE(0, z))))))
 #else
-#define GNUCGE(x, y, z) \
-  (TGIGT(0, x) || \
-   (TGIEQ(0, x) && \
-    (TGIGT(0, y) || \
-     (TGIEQ(0, y) && \
-      (TGIGE(0, z))))))
+  #define GNUCGE(x, y, z) \
+    (TGIGT(0, x) || \
+     (TGIEQ(0, x) && \
+      (TGIGT(0, y) || \
+       (TGIEQ(0, y) && \
+        (TGIGE(0, z))))))
 #endif
 
 #ifdef GNUCGT
 #elif defined(__GNUC_PATCHLEVEL__)
-#define GNUCGT(x, y, z) \
-  (TGIGT(__GNUC__, x) || \
-   (TGIEQ(__GNUC__, x) && \
-    (TGIGT(__GNUC_MINOR__, y) || \
-     (TGIEQ(__GNUC_MINOR__, y) && \
-      (TGIGT(__GNUC_PATCHLEVEL__, z))))))
+  #define GNUCGT(x, y, z) \
+    (TGIGT(__GNUC__, x) || \
+     (TGIEQ(__GNUC__, x) && \
+      (TGIGT(__GNUC_MINOR__, y) || \
+       (TGIEQ(__GNUC_MINOR__, y) && \
+        (TGIGT(__GNUC_PATCHLEVEL__, z))))))
 #elif defined(__GNUC_MINOR__)
-#define GNUCGT(x, y, z) \
-  (TGIGT(__GNUC__, x) || \
-   (TGIEQ(__GNUC__, x) && \
-    (TGIGT(__GNUC_MINOR__, y) || \
-     (TGIEQ(__GNUC_MINOR__, y) && \
-      (TGIGT(0, z))))))
+  #define GNUCGT(x, y, z) \
+    (TGIGT(__GNUC__, x) || \
+     (TGIEQ(__GNUC__, x) && \
+      (TGIGT(__GNUC_MINOR__, y) || \
+       (TGIEQ(__GNUC_MINOR__, y) && \
+        (TGIGT(0, z))))))
 #else
-#define GNUCGT(x, y, z) \
-  (TGIGT(0, x) || \
-   (TGIEQ(0, x) && \
-    (TGIGT(0, y) || \
-     (TGIEQ(0, y) && \
-      (TGIGT(0, z))))))
+  #define GNUCGT(x, y, z) \
+    (TGIGT(0, x) || \
+     (TGIEQ(0, x) && \
+      (TGIGT(0, y) || \
+       (TGIEQ(0, y) && \
+        (TGIGT(0, z))))))
 #endif
 
 #ifndef GNUCLE
-#define GNUCLE(x, y, z) (!GNUCGT(x, y, z))
+  #define GNUCLE(x, y, z) (!GNUCGT(x, y, z))
 #endif
 
 #ifndef GNUCLT
-#define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
+  #define GNUCLT(x, y, z) (!GNUCGE(x, y, z))
 #endif
 
 #ifndef GNUCEQ
-#define GNUCEQ(x, y, z) (GNUCGE(x, y, z) && GNUCLE(x, y, z))
+  #define GNUCEQ(x, y, z) (GNUCGE(x, y, z) && GNUCLE(x, y, z))
 #endif
 
 #ifndef GNUCNE
-#define GNUCNE(x, y, z) (!GNUCEQ(x, y, z))
+  #define GNUCNE(x, y, z) (!GNUCEQ(x, y, z))
 #endif
 
 /*
