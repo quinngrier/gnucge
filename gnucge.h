@@ -113,7 +113,7 @@
 #endif
 
 #ifndef GNUCEQ
-  #define GNUCEQ(x, y, z) (GNUCGE(x, y, z) && GNUCLE(x, y, z))
+  #define GNUCEQ(x, y, z) (GNUCLE(x, y, z) && GNUCGE(x, y, z))
 #endif
 
 #ifndef GNUCNE
